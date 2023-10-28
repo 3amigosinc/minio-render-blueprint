@@ -1,7 +1,6 @@
 services:
     - type: web
       name: minio-server
-      plan: free
       healthCheckPath: /minio/health/live
       runtime: image
       image:
@@ -20,7 +19,6 @@ services:
             value: "off"
     - type: web
       name: minio-console
-      plan: free
       runtime: image
       image:
           url: minio/console:v0.30.0
